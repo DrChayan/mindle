@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            display: none; /* Ocultamos las secciones por defecto */
+            padding: 20px;
+        }
+        .active {
+            display: block; /* Mostramos solo la sección activa */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mindle</h1>
+
+    <button onclick="showSection('inicio')">Inicio</button>
+    <button onclick="showSection('juego')">Juego</button>
+    <button onclick="showSection('acerca')">Acerca de</button>
+
+    <!-- Secciones -->
+    <div id="inicio" class="section active">
+        <h2>Bienvenido a Mindle</h2>
+        <p>¡Aquí puedes explorar varias secciones y divertirte con el contenido!</p>
+    </div>
+
+    <div id="juego" class="section">
+        <h2>Juego</h2>
+        <p>Esta es la sección del juego. ¡Prueba tu habilidad mental!</p>
+    </div>
+
+    <div id="acerca" class="section">
+        <h2>Acerca de</h2>
+        <p>Mindle es una plataforma para desafiar tu mente.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
