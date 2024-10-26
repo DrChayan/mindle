@@ -1,1 +1,2 @@
-miau
+        <label for="jugar">Jugar</label>
+        <input id="jugar" name="jugar"/>
