@@ -1,0 +1,5 @@
+Super Actualización (08/11/2024):
+	- Se implementaron los templates (html), también los modifiqué un poquito para que los botones puedan redireccionar a las paginas correspondientes
+	- Les creé cuentas de superusuario para que puedan acceder a la pagina /admin, se las enviaré por ds. Estas cuentas sirven para modificar la BBDD de una forma más fácil
+	- Creé una nueva app para el menú principal
+	Creo que es eso nomás xd, si me acuerdo aviso por ds xd
