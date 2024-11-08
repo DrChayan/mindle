@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from menu import views as templateMenu
+from diccionario import views as templateDiccionario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', templateMenu.index),
+    path('diccionario/', templateDiccionario.pagDicc),
+    path('login/', templateMenu.login),
+    path('register/', templateMenu.register)
+
 ]
