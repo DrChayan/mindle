@@ -1,0 +1,41 @@
+body {
+    margin:0;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+.titulo {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+.texto1 {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.boton-registrarse {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #020fff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.boton-registrarse:hover {
+    background-color: rgb(121, 138, 233);
+    cursor: pointer;
+}
+
