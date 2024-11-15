@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9^cxw0q+cvm_dk#fpgs-&(l5=#^+m*px8!%!l6=^i8_6ekp9pz
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+STATICFILES_DIRS=[os.path.join(BASE_DIR, 'templates/static'),]
 
 # Application definition
 
