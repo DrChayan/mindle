@@ -1,34 +1,85 @@
+/* General Reset */
 body {
+    margin: 10px;
+    padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo claro */
+}
+
+/* Contenedor Central */
+.Centrado {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f4f8;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    /* Ocupa toda la altura */
+    transform: translateY(+30%); /* Mueve un poco hacia arriba */
 }
 
-.EntornoBoton {
-    text-align: center;
+/* Título */
+.Titulo {
+    font-size: 48px;
+    color: #333; /* Gris oscuro */
+    margin-bottom: 20px;
 }
 
-.Boton {
-    background-color: #4caf50; /* Color verde */
-    color: white;
+/* Botones */
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #00bfff; /* Azul */
+    color: #fff;
     border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.Boton:hover {
-    background-color: #45a049; /* Verde más oscuro */
-    transform: scale(1.05);
+button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
 }
 
-.Boton:active {
-    background-color: #3e8e41; /* Verde aún más oscuro */
-    transform: scale(0.95);
+/* Contenedor de Ranking */
+.Ranking {
+    position: fixed; /* Para colocarlo fuera del flujo */
+    top: 20%; /* Ajusta la altura */
+    right: 20px; /* Ajusta la distancia del borde derecho */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Lista del Ranking */
+.Ranking h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.Ranking ol {
+    padding-left: 20px;
+}
+
+.Ranking li {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Enlace discreto en la esquina inferior derecha */
+.EnlaceInferior {
+    position: fixed; /* Fija en la esquina inferior derecha */
+    bottom: 10px; /* Separación desde el borde inferior */
+    right: 10px; /* Separación desde el borde derecho */
+    font-size: 12px; /* Tamaño de letra discreto */
+    color: #555; /* Gris para menos énfasis */
+    text-decoration: none; /* Sin subrayado */
+    opacity: 0.7; /* Semitransparente */
+    transition: opacity 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.EnlaceInferior:hover {
+    opacity: 1; /* Totalmente visible al pasar el mouse */
+    color: #007BFF; /* Cambia a azul */
 }

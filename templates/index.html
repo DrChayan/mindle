@@ -7,24 +7,27 @@
 </head>
 <body>
     <form>
-        <button type="submit" formaction="/login">Iniciar sesión</button>
-        <h1>Mindle</h1>
-    <div class="EntornoBoton">
+        <button class="login" type="submit" formaction="/login">Iniciar sesión</button>
+    <div class="Centrado">   
+            <h1 class="Titulo">Mindle</h1>
             <button class="Boton" type="submit" formaction="/game">Jugar</button>
+    
+            <br>
+            <br>
+            <button type="submit" formaction="/diccionario">Diccionario</button>
     </div>
-        <br>
-        <br>
-        <button type="submit" formaction="/diccionario">Diccionario</button>
+    <div class="Ranking">    
         <h1>Ranking</h1>
-    <ol>
-        <li value="1"> Jugador 1</li>
-        <li> Jugador 2</li>   
-        <li> Jugador 3</li>   
-        <li> Jugador 4</li>   
-        <li> Jugador 5</li>       
-    </ol>
+        <ol>
+            <li value="1"> Jugador 1</li>
+            <li> Jugador 2</li>   
+            <li> Jugador 3</li>   
+            <li> Jugador 4</li>   
+            <li> Jugador 5</li>       
+        </ol>
+    </div>
     </form>
-    <a href="/admin">Página de admin</a>
+    <a class="EnlaceInferior" href="/admin">Página de admin</a>
 </body>
 
 </html>
