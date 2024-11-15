@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path
 from menu import views as templateMenu
 from diccionario import views as templateDiccionario
+from juego import views as templateGame
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', templateMenu.index),
     path('diccionario/', templateDiccionario.pagDicc),
     path('login/', templateMenu.login),
-    path('register/', templateMenu.register)
+    path('register/', templateMenu.register),
+    path('game/', templateGame.game),
 
 ]

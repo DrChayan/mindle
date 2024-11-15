@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f4f8;
+}
+
+.EntornoBoton {
+    text-align: center;
+}
+
+.Boton {
+    background-color: #4caf50; /* Color verde */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Boton:hover {
+    background-color: #45a049; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+.Boton:active {
+    background-color: #3e8e41; /* Verde aún más oscuro */
+    transform: scale(0.95);
+}
