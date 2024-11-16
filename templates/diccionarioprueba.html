@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario de Diagnósticos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 60%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título Diccionario en celeste */
+        .title {
+            font-size: 2.5rem;
+            color: #87CEEB; /* Celeste claro */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Contenedor de la barra de búsqueda */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        /* Imagen de la lupa */
+        .search-icon {
+            width: 50px; /* Tamaño más pequeño */
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        /* Barra de búsqueda */
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #87CEEB;
+            border-radius: 8px;
+            outline: none;
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+        }
+
+        .search-bar:focus {
+            border-color: #00BFFF;
+        }
+
+        /* Contenedor de la lista de diagnósticos */
+        .diagnosticos-container {
+            margin-top: 20px;
+        }
+
+        /* Título de Nombres de los diagnósticos */
+        .diagnosticos-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Lista ordenada de diagnósticos con scroll */
+        .diagnosticos-list {
+            max-height: 300px; /* Altura máxima con scroll */
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            list-style: decimal inside;
+        }
+
+        .diagnosticos-list li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Título del Diccionario -->
+        <h1 class="title">Diccionario</h1>
+
+        <!-- Contenedor de la barra de búsqueda con la lupa -->
+        <div class="search-container">
+            <img src="https://image.pngaaa.com/96/60196-middle.png" alt="Lupa" class="search-icon">
+            <input type="text" class="search-bar" placeholder="Barra de búsqueda">
+        </div>
+
+        <!-- Contenedor de la lista de diagnósticos -->
+        <div class="diagnosticos-container">
+            <div class="diagnosticos-title">Nombres de los diagnósticos</div>
+            <ol class="diagnosticos-list">
+                <!-- Lista de diagnósticos con scroll -->
+                <li>Diagnóstico 1</li>
+                <li>Diagnóstico 2</li>
+                <li>Diagnóstico 3</li>
+                <li>Diagnóstico 4</li>
+                <li>Diagnóstico 5</li>
+                <li>Diagnóstico 6</li>
+                <li>Diagnóstico 7</li>
+                <li>Diagnóstico 8</li>
+                <li>Diagnóstico 9</li>
+                <li>Diagnóstico 10</li>
+                <li>Diagnóstico 11</li>
+                <li>Diagnóstico 12</li>
+                <li>Diagnóstico 13</li>
+                <li>Diagnóstico 14</li>
+                <li>Diagnóstico 15</li>
+                <!-- Puedes añadir más diagnósticos aquí -->
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

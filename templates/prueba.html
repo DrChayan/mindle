@@ -1,0 +1,95 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindle</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título grande y celeste claro */
+        .title {
+            font-size: 3rem;
+            color: #87CEEB; /* Celeste claro */
+            margin-bottom: 20px;
+        }
+
+        /* Campo de texto */
+        .text-input {
+            width: 80%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 2px solid #87CEEB;
+            border-radius: 8px;
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        /* Efecto al enfocar el campo de texto */
+        .text-input:focus {
+            border-color: #00BFFF; /* Color más intenso al enfocar */
+        }
+
+        /* Contenedor de pistas */
+        .pistas-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        /* Rectángulo */
+        .rectangulo {
+            width: 80px;
+            height: 30px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+
+        /* Cuadrados (pistas) */
+        .cuadro {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #87CEEB; /* Borde color celeste */
+            background-color: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Mindle</h1>
+        <input type="text" class="text-input" placeholder="Ingresa tu texto aquí...">
+        
+        <!-- Contenedor para el rectángulo y los cuadrados -->
+        <div class="pistas-container">
+            <div class="rectangulo"></div> <!-- Rectángulo -->
+            <div class="cuadro"></div> <!-- Cuadrado 1 -->
+            <div class="cuadro"></div> <!-- Cuadrado 2 -->
+            <div class="cuadro"></div> <!-- Cuadrado 3 -->
+            <div class="cuadro"></div> <!-- Cuadrado 4 -->
+            <div class="cuadro"></div> <!-- Cuadrado 5 -->
+        </div>
+    </div>
+</body>
+</html>
