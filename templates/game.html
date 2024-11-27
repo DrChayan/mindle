@@ -2,30 +2,30 @@
 <html>
 <head>
     <title>Mindle</title>
+    {% load static %}
+    <link rel="stylesheet" href="..\static\css\style_Game.css"/>
 </head>
-    <h1>Mindle</h1>
+
+
 <body>
-    <label for="UserID">Ingrese: </label>
-    <input id="UserID" name ="Ingrese"/>
-    <br>
-    <h2>Intentos</h2> 
-    <ul>
-        <li> 1............</li>
-        <li> 2............</li>   
-        <li> 3............</li>   
-        <li> 4............</li>   
-        <li> 5............</li>       
-    </ul>
-    <br>
-    <h2>Pistas</h2>
-    <ul>
-        <li> ✅............</li>
-        <li> ❌............</li>   
-        <li> ✅............</li>   
-        <li> 💡............</li>   
-        <li> ❌............</li>       
-    </ul>
-    <br>
-    <textarea id="Descripción al ganar" placeholder="Descripción al ganar" name="Descripción"></textarea>
+    <header>
+        <h1>¡Adivina el Trastorno Mental!</h1>
+        <p>Ingresa un trastorno mental .</p>
+    </header>
+    <main>
+        <div class="game-container">
+            <input type="text" id="userInput" placeholder="Escribe aquí tu respuesta..." maxlength="20">
+            <button id="submitGuess">Verificar</button>
+            <div id="feedback"></div>
+            <div class="attempts">
+                <h2>Intentos</h2>
+                <ul id="attemptList"></ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Desarrollado para fines educativos</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
