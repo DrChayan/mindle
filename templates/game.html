@@ -3,29 +3,32 @@
 <head>
     <title>Mindle</title>
     {% load static %}
-    <link rel="stylesheet" href="..\static\css\style_Game.css"/>
+    <link rel="stylesheet" href="/static/css/style_Game.css"/>
 </head>
-
-
 <body>
-    <header>
-        <h1>¡Adivina el Trastorno Mental!</h1>
-        <p>Ingresa un trastorno mental .</p>
-    </header>
-    <main>
-        <div class="game-container">
-            <input type="text" id="userInput" placeholder="Escribe aquí tu respuesta..." maxlength="20">
-            <button id="submitGuess">Verificar</button>
-            <div id="feedback"></div>
-            <div class="attempts">
-                <h2>Intentos</h2>
-                <ul id="attemptList"></ul>
+    <div class="volver">
+        <button class="button " onclick="history.back();">VOLVER</button>
+    </div>  
+    <div class="Centrado">
+        <header>
+            <h1></h1>*
+            <p>Ingresa un trastorno mental .</p>
+        </header>
+        <main>
+            <div class="game-container">
+                <input type="text" id="userInput" placeholder="Escribe aquí tu respuesta..." maxlength="20">
+                <button class="button" id="submitGuess">Verificar</button>
+                <div id="feedback"></div>
+                <div class="attempts">
+                    <h2>Intentos</h2>
+                    <ul id="attemptList"></ul>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <p>Desarrollado para fines educativos</p>
-    </footer>
-    <script src="script.js"></script>
+        </main>
+        <footer>
+            <p>El diagnostico aleatorio es: {{ Trastorno }}</p>
+        </footer>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
