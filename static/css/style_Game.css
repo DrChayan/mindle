@@ -1,61 +1,75 @@
-.Centrado {
-    display: flex; /* Usar flexbox para centrar */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
-    text-align: center; /* Centra el texto dentro del div */
-}
-
 body {
-    margin: 0; /* Elimina los márgenes predeterminados */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
-    font-family: Arial, sans-serif; /* Estilo base */
 }
 
-.volver {
-    position: absolute; /* Asegura que el botón "VOLVER" esté fijo y no interfiera con el centrado */
-    top: 10px; /* Separación desde el borde superior */
-    left: 10px; /* Separación desde el borde izquierdo */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4caf50;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #00bfff; /* Azul */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-}
-.button:hover {
-    background-color: #004c9c;
-}
-input {
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    width: 80%;
-    max-width: 300px; /* Limita el ancho */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-submitGuess {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #000000; /* Verde */
+    background-color: #4caf50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 1em;
 }
 
-footer {
+button:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.attempts {
     margin-top: 20px;
-    font-size: 14px;
-    color: gray;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #e3e3e3;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
 }

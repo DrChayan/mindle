@@ -2,7 +2,6 @@ from django.db import models
 
 # Create your models here.
 class trastorno(models.Model):
-    seleccionada = models.BooleanField(default=False)
     nombre=models.CharField(max_length=200)
     contexto=models.CharField(max_length=300)
     def __str__(self):
