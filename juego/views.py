@@ -12,8 +12,8 @@ def obtenerTrastornoAleatorio(request):
     if trastorno:
         trastornoAleatorio.seleccionada = True
         trastornoAleatorio.save()
-        Trastorno = trastornoAleatorio.texto
+        Trastorno = trastornoAleatorio.nombre
     else:
-        pass
+        trastorno.objects.update(seleccionada=False)
 
     return render(request, 'game.html', {'Trastorno': Trastorno})
