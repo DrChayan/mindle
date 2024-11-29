@@ -27,5 +27,6 @@ urlpatterns = [
     path('login/', templateMenu.login),
     path('register/', templateMenu.register),
     path('game/', templateGame.game),
+    path('recibir/', templateGame.obtenerTrastornoAleatorio)
 
 ]
