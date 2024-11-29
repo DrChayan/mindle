@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', templateMenu.index),
     path('diccionario/', templateDiccionario.pagDicc),
-    path('game/', templateGame.game),
+    path('game/', templateGame.game, name='game'),
     path('', include('usuarios.urls')),
 ]

@@ -7,11 +7,9 @@ def registro(request):
     if request.method == 'POST':
         form = RegistroForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)  # Inicia sesión automáticamente después del registro
-            return redirect('inicioDeSesion.html')  # Redirige a la página principal (asegúrate de que esta URL exista)
-        else:
-            print(form.errors)
+            form.save()
+            #iniciar_sesion(request, user) ver si se pued einiciar s al registrarse automaticamente
+            return redirect('game')  # Redirige a la página principal (asegúrate de que esta URL exista)
     else:
         form=RegistroForm()
     return render(request, 'registrarse.html', {'form': form})
