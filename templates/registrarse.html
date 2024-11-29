@@ -1,21 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-<head>       
-    <title>Registrate en Mindle </title>
-    <link rel="stylesheet" href="static/css/styleInicioDeSesion.css" />
+<head>
+    <title>Regístrate en Mindle</title>
+    <link rel="stylesheet" href="{% static 'css/styleRegistrarse.css' %}">
 </head>
 <body>
     <h1>Registrarse</h1>
-    <form>
-        <label for="UserID">Nombre de usuario: </label>
-        <input id="UserID" name ="Nommbre de Usuario"/>
-        <br>    
-        <label for="Password">Contraseña: </label>
-        <input type="Password" id="Password" name ="Password" placeholder="Al menos 8 caracteres..."/>
-        <br>
-        <br>
-        <p>¿Ya tienes una cuenta?</p>
-        <a target="_blank" href="/login">Iniciar sesion </a> <!-- en comillas de href añadir la pagina de iniciar sesion//// Listo!!!x2-->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- Si decides eliminar {{ form.as_p }}, añade aquí los campos manuales -->
+        <button type="submit">Registrarse</button>
     </form>
+    <p>¿Ya tienes una cuenta?</p>
+    <a href="/login">Iniciar sesión</a>
 </body>
 </html>

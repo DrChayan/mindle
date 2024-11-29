@@ -19,13 +19,12 @@ from django.urls import path
 from menu import views as templateMenu
 from diccionario import views as templateDiccionario
 from juego import views as templateGame
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', templateMenu.index),
     path('diccionario/', templateDiccionario.pagDicc),
-    path('login/', templateMenu.login),
-    path('register/', templateMenu.register),
-    path('game/', templateGame.game),
-
+    path('game/', templateGame.game, name='game'),
+    path('', include('usuarios.urls')),
 ]
