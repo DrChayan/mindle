@@ -24,7 +24,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', templateMenu.index),
-    path('diccionario/', templateDiccionario.pagDicc),
+    path('diccionario/', templateDiccionario.trastorno_list),
     path('game/', templateGame.game),
     path('', include('usuarios.urls')),
+    path('prueba/', templateDiccionario.trastorno_list)
 ]

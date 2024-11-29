@@ -94,38 +94,40 @@
 </head>
 <body>
     <div class="container">
-        <!-- Título del Diccionario -->
-        <h1 class="title">Diccionario</h1>
+<!-- Título del Diccionario -->
+<h1 class="title">Diccionario</h1>
 
-        <!-- Contenedor de la barra de búsqueda con la lupa -->
-        <div class="search-container">
-            <img src="https://image.pngaaa.com/96/60196-middle.png" alt="Lupa" class="search-icon">
-            <input type="text" class="search-bar" placeholder="Barra de búsqueda">
-        </div>
+<!-- Contenedor de la barra de búsqueda con la lupa -->
+<div class="search-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Lupa" class="search-icon">
+    <form method="get" action="">
+        <input type="text" name="q" class="search-bar" value="{{ query }}" placeholder="Barra de búsqueda">
+    </form>
+</div>
 
-        <!-- Contenedor de la lista de diagnósticos -->
-        <div class="diagnosticos-container">
-            <div class="diagnosticos-title">Nombres de los diagnósticos</div>
-            <ol class="diagnosticos-list">
-                <!-- Lista de diagnósticos con scroll -->
-                <li>Diagnóstico 1</li>
-                <li>Diagnóstico 2</li>
-                <li>Diagnóstico 3</li>
-                <li>Diagnóstico 4</li>
-                <li>Diagnóstico 5</li>
-                <li>Diagnóstico 6</li>
-                <li>Diagnóstico 7</li>
-                <li>Diagnóstico 8</li>
-                <li>Diagnóstico 9</li>
-                <li>Diagnóstico 10</li>
-                <li>Diagnóstico 11</li>
-                <li>Diagnóstico 12</li>
-                <li>Diagnóstico 13</li>
-                <li>Diagnóstico 14</li>
-                <li>Diagnóstico 15</li>
-                <!-- Puedes añadir más diagnósticos aquí -->
-            </ol>
-        </div>
-    </div>
+<!-- Contenedor de la lista de diagnósticos -->
+<div class="diagnosticos-container">
+    <div class="diagnosticos-title">Nombres de los diagnósticos</div>
+    <ol class="diagnosticos-list">
+        <!-- Lista de diagnósticos con scroll -->
+        <ul>
+            {% for trastorno in trastornos %}
+                <li>
+                    {{ trastorno.nombre }}
+                </li>
+            {% endfor %}
+        </ul>
+        <!-- Puedes añadir más diagnósticos aquí -->
+    </ol>
+</div>
+<script>
+    document.querySelector('.search-bar').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Previene que la página recargue sin enviar datos
+            this.form.submit(); // Envía el formulario
+        }
+    });
+</script>
+</div>
 </body>
 </html>
