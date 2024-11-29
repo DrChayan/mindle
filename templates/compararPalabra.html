@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparar Palabra</title>
+</head>
+<body>
+    <h1>Introduce la palabra secreta</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Comparar</button>
+    </form>
+    <p>{{ resultado }}</p>
+</body>
+</html>
