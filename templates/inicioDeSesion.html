@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>      
+    
     <title>Bienvenido a Mindle</title>
-    <link rel="stylesheet" href="..\static\css\styleInicioDeSesion.css" />
+    <link rel="stylesheet" href="../static/css/styleInicioDeSesion.css" />
 </head>
 <body>
-    <h1 class="titulo">Iniciar sesion</h1>
-    <form class="texto1">
-        <br>
-        
-        <label for="UserID">Nombre de usuario: </label>
-        <input id="UserID" name ="Nommbre de Usuario"/>
-        <br>    
-        <br>
-        <label for="Password">Contraseña: </label>
-        <input type="Password" id="Password" name ="Password" placeholder="Al menos 8 caracteres..."/>
-        <br>
-        <br>
-        <p>¿No tienes una cuenta?</p>
-        <a class="boton-registrarse" target="_self" href="/register">Registrarse </a> <!-- en comillas de href añadir la pagina de iniciar sesion//// Listo!!!-->
-        <br>
-        
-    </form>
+        <div class="volver">        
+            <button class="button" onclick="history.back();">VOLVER</button>
+        </div> 
+    <div class="rounded-box">
+        <h1 class="titulo">Iniciar sesión</h1>
+        <form class="texto1">
+            <label for="UserID">Nombre de usuario:</label>
+            <input id="UserID" name="Nommbre de Usuario" placeholder="VictorGutiérrez123..."/>
+            <br><br>
+            <label for="Password">Contraseña:</label>
+            <input type="Password" id="Password" name="Password" placeholder="Al menos 8 caracteres..."/>
+            <br><br>
+            <p>¿No tienes una cuenta?</p>
+            <a class="button" target="_self" href="/register">Registrarse</a>
+        </form>
+    </div>    
 </body>
 </html>

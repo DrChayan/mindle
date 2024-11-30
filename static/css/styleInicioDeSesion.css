@@ -1,41 +1,82 @@
+/* General */
 body {
-    margin:0;
-    padding: 10px 20px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
 }
-.titulo {
+
+/* Caja redondeada */
+.rounded-box {
+    background-color: #d3d3d3; /* Tono gris claro */
+    width: 400px; /* Ajusta el ancho */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
     text-align: center;
-    margin: 0;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
+    position: relative; /* Para posicionar el botón "volver" */
 }
-.texto1 {
-    text-align: center;
-    margin: 0;
+
+/* Botón "VOLVER" */
+.volver {
     position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 10px;
+    left: 10px;
 }
-.boton-registrarse {
+
+/* Botones */
+.button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #020fff;
+    background-color: #00bfff;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s ease;
-}
-.boton-registrarse:hover {
-    background-color: rgb(121, 138, 233);
+    border: none;
     cursor: pointer;
 }
 
+.button:hover {
+    background-color:#0056b3;
+}
+
+/* Título */
+.titulo {
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Texto y formulario */
+.texto1 label {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+}
+
+.texto1 input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.texto1 a {
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ccc;
+}
+input::placeholder {
+    color: #a9a9a9; /* Un gris más oscuro */
+    font-style: italic; /* Opcional, para darle estilo */
+}
