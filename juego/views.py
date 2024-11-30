@@ -2,32 +2,25 @@ from django.shortcuts import render
 from diccionario.models import trastorno 
 import random
 from mindle.forms import trastornoForm
+from django.utils import timezone
 
 # Create your views here.
 
 def game(request):
     return render(request, 'game.html')
 
-def obtenerTrastornoAleatorio(request):
+def obtenerTrastorno(request):
+    hoy = timezone.now().date()
 
-    trastornoAleatorio = trastorno.objects.filter(seleccionada=False).order_by("?").first()
+    trastornoEscogido = trastorno.objects.filter(fecha=hoy).order_by("?").first()
 
-    if trastornoAleatorio:
-        trastornoAleatorio.seleccionada = True
-        trastornoAleatorio.save()
-        Trastorno = trastornoAleatorio.nombre
+    if trastornoEscogido:
+        return str(trastornoEscogido)
     else:
-        actualizar(request)
-
-    return str(trastornoAleatorio)
-
-def actualizar(request):
-    trastorno.objects.filter(seleccionada=True).update(seleccionada=False)
-    
-    return 0
+        return "None"
 def compararPalabra(request):
     resultado= ""
-    trastornoCorrecto = obtenerTrastornoAleatorio(request)
+    trastornoCorrecto = obtenerTrastorno(request)
     
     if request.method == "POST":
         form = trastornoForm(request.POST)
@@ -36,7 +29,7 @@ def compararPalabra(request):
             if inputTrastorno.strip() == trastornoCorrecto.strip():
                 resultado = "Ganaste trsatornado !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
             else:
-                resultado = trastornoCorrecto
+                resultado = "mmmmm estuvistes cercas xdddd creo"
     else:
         form = trastornoForm()
 
