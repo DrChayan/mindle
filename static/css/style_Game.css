@@ -6,7 +6,13 @@
     flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
     text-align: center; /* Centra el texto dentro del div */
 }
-
+#sintomaloco {
+    background-color: #d4edda;  /* Verde suave */
+    padding: 20px;              /* Espaciado interno */
+    border-radius: 8px;         /* Bordes redondeados */
+    border: 1px solid #c3e6cb;  /* Borde verde claro */
+    margin-bottom: 15px;        /* Espaciado inferior */
+}
 body {
     margin: 0; /* Elimina los márgenes predeterminados */
     display: flex;

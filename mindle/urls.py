@@ -22,12 +22,11 @@ from juego import views as templateGame
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', templateMenu.index),
+    path('', templateMenu.index, name="inicio"),
     path('diccionario/', templateDiccionario.pagDicc),
     path('login/', templateMenu.login),
     path('register/', templateMenu.register),
-    path('game/', templateGame.game),
+    path('game/', templateGame.compararPalabra, name="juego"),
     path('recibir/', templateGame.obtenerTrastorno),
-    path('comparar/', templateGame.compararPalabra)
 
 ]

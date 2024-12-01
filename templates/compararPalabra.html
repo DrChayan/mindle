@@ -2,15 +2,22 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Comparar Palabra</title>
+    <title>Comparación de Trastornos</title>
 </head>
 <body>
-    <h1>Introduce la palabra secreta</h1>
-    <form method="post">
+    <h1>Compara los síntomas de los trastornos</h1>
+    
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Comparar</button>
+        <button type="submit">Comprobar</button>
     </form>
-    <p>{{ resultado }}</p>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <p>{{ resultado }}</p>
+    {% endif %}
+
+    <a href="/">Volver al inicio</a>
 </body>
 </html>
