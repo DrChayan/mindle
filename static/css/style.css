@@ -1,11 +1,133 @@
 /* General Reset */
 body {
-    margin: 10px;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Fondo claro */
+    font-family: 'Joti-One',Arial, sans-serif;
+    margin: auto;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(103, 144, 162) 3%, rgb(71, 108, 146) 38%, rgb(28, 69, 102) 68%, rgb(7, 24, 59) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url('imagenes/Fondo3.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    z-index: +1; 
+    animation: Zoom 5s 1;
+    transition: opacity 0.75s, visibility 0.75s ;
+}
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes Zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+.MindleA {
+    position: relative;
+    top: -6%
 }
 
+svg path {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    stroke: #000000;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: AnimacionM 3s ease-in-out forwards;
+
+}
+
+@keyframes AnimacionM {
+    0% {
+        stroke-dashoffset: 50;
+    }
+    90% {
+        fill:transparent;
+    }
+    100% {
+        fill: #000000;
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
 /* Contenedor Central */
 .Centrado {
     display: flex;
@@ -16,10 +138,10 @@ body {
     transform: translateY(+30%); /* Mueve un poco hacia arriba */
 }
 
-/* Título */
+/* Título */ 
 .Titulo {
-    font-size: 48px;
-    color: #333; /* Gris oscuro */
+    color: rgb(255, 255, 255);
+    font-size: 44px; 
     margin-bottom: 20px;
 }
 
@@ -30,25 +152,28 @@ button {
     background-color: #00bfff; /* Azul */
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease-in 30ms;
 }
 
 button:hover {
     background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.2);
 }
 
 /* Contenedor de Ranking */
 .Ranking {
     position: fixed; /* Para colocarlo fuera del flujo */
     top: 20%; /* Ajusta la altura */
-    right: 20px; /* Ajusta la distancia del borde derecho */
+    right: 1%; /* Ajusta la distancia del borde derecho */
     background-color: #fff; /* Fondo blanco */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 400ms ease-in-out 300ms;
+    transform-origin: right center;
 }
 
 /* Lista del Ranking */
@@ -65,6 +190,17 @@ button:hover {
 .Ranking li {
     margin-bottom: 5px;
     color: #555;
+}
+.Ranking:hover {
+    transform: scale(1.5)translateX(-7px);
+   
+}
+.login {
+    margin-left: 10px ;
+    transition: transform 400ms ease-in-out 300ms;
+}
+.login:hover {
+    transform: translate(20px,8px) scale(1.2);
 }
 
 /* Enlace discreto en la esquina inferior derecha */

@@ -26,8 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', templateMenu.index, name='index'),
     path('diccionario/', templateDiccionario.diccionario_view, name='diccionario'),  # Usamos la vista 'diccionario_view'
-    path('game/', templateGame.game),
+    path('game/', templateGame.compararPalabra, name="juego"),
     path('prueba/', templateDiccionario.trastorno_list),
     path('usuarios/', include('usuarios.u_urls')),
     path('register/', u_views.registro, name='registro'),
+    path('ganar/',templateGame.ganar, name="ganar")
 ]
