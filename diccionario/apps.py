@@ -1,6 +1,10 @@
+# diccionario/apps.py
 from django.apps import AppConfig
 
-
 class DiccionarioConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
     name = 'diccionario'
+
+    def ready(self):
+        # No es necesario importar modelos aquí
+        # Si necesitas importar algo aquí, asegúrate de que no sea una operación que dependa de los modelos directamente
+        pass

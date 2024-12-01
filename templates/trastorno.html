@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnósticos</title>
+</head>
+<body>
+    <h1>Lista de diagnósticos</h1>
+    <ul>
+        {% for trastorno in trastornos %}
+            <li>
+                {{ trastorno.nombre }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
