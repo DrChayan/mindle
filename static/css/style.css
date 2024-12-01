@@ -1,7 +1,7 @@
 /* General Reset */
 body {
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Joti-One',Arial, sans-serif;
     margin: auto;
     overflow: auto;
     background: linear-gradient(315deg, rgb(103, 144, 162) 3%, rgb(71, 108, 146) 38%, rgb(28, 69, 102) 68%, rgb(7, 24, 59) 98%);
@@ -9,7 +9,66 @@ body {
     background-size: 400% 400%;
     background-attachment: fixed;
 }
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url('imagenes/Fondo3.jpg') ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    z-index: +1; 
+    animation: Zoom 5s 1;
+    transition: opacity 0.75s, visibility 0.75s ;
+}
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+@keyframes Zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+.MindleA {
+    position: relative;
+    top: -6%
+}
 
+svg path {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    stroke: #000000;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: AnimacionM 3s ease-in-out forwards;
+
+}
+
+@keyframes AnimacionM {
+    0% {
+        stroke-dashoffset: 50;
+    }
+    90% {
+        fill:transparent;
+    }
+    100% {
+        fill: #000000;
+        stroke-dashoffset: 0;
+    }
+}
 @keyframes gradient {
     0% {
         background-position: 0% 0%;
@@ -84,10 +143,6 @@ body {
     color: rgb(255, 255, 255);
     font-size: 44px; 
     margin-bottom: 20px;
-    text-shadow: 
-        0 0 5px black, 
-        0 0 10px black, 
-        0 0 20px black;
 }
 
 /* Botones */
