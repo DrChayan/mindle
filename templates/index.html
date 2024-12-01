@@ -6,15 +6,27 @@
     <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-    <form>
-        <button class="login" type="submit" formaction="/login">Iniciar sesión</button>
+    <div class="Sesion">
+        {% if user.is_authenticated %}
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Cerrar sesión</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}"><button type= "button">Iniciar sesion</button></a> 
+        {% endif %}
+    <div>
     <div class="Centrado">   
-            <h1 class="Titulo">Mindle</h1>
-            <button class="Boton" type="submit" formaction="/game">Jugar</button>
-    
-            <br>
-            <br>
-            <button type="submit" formaction="/diccionario">Diccionario</button>
+        <h1 class="Titulo">Mindle</h1>
+
+        <form action="/game" method="get"> 
+            <button class="Boton" type="submit">Jugar</button>
+        </form> 
+        <br><br>
+        <form action="/diccionario" method="get">
+            <button type="submit">Diccionario</button> 
+        </form>
+
     </div>
     <div class="Ranking">    
         <h1>Ranking</h1>
