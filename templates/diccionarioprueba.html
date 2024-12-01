@@ -99,8 +99,15 @@
         }
     </style>
 </head>
+
 <body>
+    
     <div class="container">
+        <div class="volver">
+            <form action="{% url 'index' %}" method="get">
+                <button type="submit">Volver al inicio</button>
+            </form>
+        </div>
         <!-- Título del Diccionario -->
         <h1 class="title">Diccionario</h1>
 
