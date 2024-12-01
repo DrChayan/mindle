@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class trastorno(models.Model):
     nombre=models.CharField(max_length=200)
-    contexto=models.CharField(max_length=300)
+    contexto=models.CharField(max_length=500)
     def __str__(self):
         return self.nombre
     

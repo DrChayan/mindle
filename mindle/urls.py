@@ -20,12 +20,13 @@ from menu import views as templateMenu
 from diccionario import views as templateDiccionario
 from juego import views as templateGame
 from django.urls import path, include
+from diccionario.views import diccionario_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', templateMenu.index),
-    path('diccionario/', templateDiccionario.trastorno_list),
+    path('diccionario/', templateDiccionario.diccionario_view, name='diccionario'),  # Usamos la vista 'diccionario_view'
     path('game/', templateGame.game),
     path('', include('usuarios.urls')),
-    path('prueba/', templateDiccionario.trastorno_list)
+    path('prueba/', templateDiccionario.trastorno_list),
 ]

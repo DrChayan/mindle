@@ -119,13 +119,14 @@
                 <li>
                     <span class="nombre">{{ trastorno.nombre }}</span>
                     <div class="detalles">
-                        <p>Aquí va la descripción del trastorno: {{ trastorno.descripcion }}</p>
+                        <p>{{ trastorno.contexto }}</p>
                     </div>
                 </li>
                 {% endfor %}
             </ol>
         </div>
     </div>
+
 
     <script>
         document.querySelectorAll('.diagnosticos-list li').forEach(function(item) {
