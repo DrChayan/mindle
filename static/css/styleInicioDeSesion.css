@@ -6,7 +6,7 @@ body {
     font-family: Arial, sans-serif;
     margin: auto;
     overflow: auto;
-    background: linear-gradient(315deg, rgb(103, 144, 162) 3%, rgb(71, 108, 146) 38%, rgb(28, 69, 102) 68%, rgb(7, 24, 59) 98%);
+    background: linear-gradient(315deg, rgb(164, 228, 255) 3%, rgb(102, 208, 254) 38%, rgb(50, 172, 253) 68%, rgb(1, 101, 159) 98%);
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
@@ -91,10 +91,10 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    transition: transform 400ms ease-in-out 300ms;
+    transition: transform 200ms ease-in-out 100ms;
 }
 .volver:hover {
-    transform: translate(8px,3px) ;
+    transform: translate(10px,4px) ;
 }
 /* Botones */
 .button {
@@ -109,12 +109,12 @@ body {
     transition: background-color 0.3s ease;
     border: none;
     cursor: pointer;
-    transition: transform 400ms ease-in-out 300ms;
+    transition: transform 200ms ease-in-out 100ms;
 }
 
 .button:hover {
     background-color:#0056b3;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 /* Título */

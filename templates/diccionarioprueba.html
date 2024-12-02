@@ -97,6 +97,22 @@
         .detalles.abierto {
             max-height: 200px; /* Altura máxima cuando está abierto */
         }
+        .button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #00bfff; /* Azul */
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease-in 30ms;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Azul más oscuro */
+            transform: scale(1.2);
+        }
     </style>
 </head>
 
@@ -105,7 +121,7 @@
     <div class="container">
         <div class="volver">
             <form action="{% url 'index' %}" method="get">
-                <button type="submit">Volver al inicio</button>
+                <button class="button" type="submit">Volver</button>
             </form>
         </div>
         <!-- Título del Diccionario -->

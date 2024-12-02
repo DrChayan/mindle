@@ -1,75 +1,138 @@
+.Centrado {
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
+    text-align: center; /* Centra el texto dentro del div */
+}
+.rounded-box {
+    background-color: #d3d3d3; /* Tono gris claro */
+    width: 550px; /* Ajusta el ancho */
+    padding: 20px; /* Espaciado interno */
+    height: 60%;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center;
+    position: relative; /* Para posicionar el botón "volver" */
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    overflow: auto;
+    background: linear-gradient(315deg,  rgb(164, 228, 255) 3%, rgb(102, 208, 254) 38%, rgb(50, 172, 253) 68%, rgb(1, 101, 159) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
-h1 {
-    color: #4caf50;
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.game-container {
-    width: 90%;
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
 }
 
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.volver {
+    position: absolute; /* Asegura que el botón "VOLVER" esté fijo y no interfiera con el centrado */
+    top: 0px; /* Separación desde el borde superior */
+    left: 10px; /* Separación desde el borde izquierdo */
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #00bfff; /* Azul */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in 30ms;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.2);
+}
 input {
-    width: calc(100% - 22px);
     padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 300px; /* Limita el ancho */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
+submitGuess {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000; /* Verde */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#feedback {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-.attempts {
+footer {
     margin-top: 20px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    background: #e3e3e3;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
+    font-size: 14px;
+    color: gray;
 }
