@@ -3,6 +3,7 @@ from diccionario.models import trastorno, sintomas
 import random
 from mindle.forms import trastornoForm
 from django.utils import timezone
+from .models import Puntaje
 
 # Create your views here.
 
@@ -71,6 +72,11 @@ def compararPalabra(request):
             if inputTrastorno.strip() == trastornoCorrecto.strip():
                 mostrar_modal = True
                 request.session['acierto'] = True
+                if request.user.is_authenticated:  # Solo si el jugador está logueado
+                    # Asegúrate de que el usuario tiene un puntaje registrado
+                    puntaje_usuario, created = Puntaje.objects.get_or_create(usuario=request.user)
+                    puntaje_usuario.puntaje += 1  # Sumar un punto por acertar
+                    puntaje_usuario.save()  # Guardar el puntaje actualizado
             else:
                 resultado = comparar_sintomas(obtener_sintomas(inputTrastorno),obtener_sintomas(trastornoCorrecto))
                 request.session['acierto'] = False
@@ -78,4 +84,9 @@ def compararPalabra(request):
     else:
         form = trastornoForm()
 
-    return render(request, 'game.html',{'form':form, 'resultado': resultado, 'mostrar_modal': mostrar_modal, 'intentos': request.session['intentos']})
+    return render(request, 'game.html',
+        {'form':form, 
+        'resultado': resultado, 
+        'mostrar_modal': mostrar_modal, 
+        'intentos': request.session['intentos']}
+        )
