@@ -1,18 +1,29 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-<head>
+<html >
+<head>      
+    
     <title>Bienvenido a Mindle</title>
-    <link rel="stylesheet" href="{% static 'css/styleInicioDeSesion.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styleInicioDeSesion.css' %}" />
 </head>
 <body>
-    <h1>Iniciar sesión</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Iniciar sesión</button>
-    </form>
-    <p>¿No tienes una cuenta?</p>
-    <a href="/register">Registrarse</a>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+        <div class="volver">        
+            <button class="button" onclick="history.back();">VOLVER</button>
+        </div> 
+    <div class="rounded-box">
+            <h1>Iniciar sesión</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="button" type="submit">Iniciar sesión</button>
+        </form>
+        <p>¿No tienes una cuenta?</p>
+        <a href="/register">Registrarse</a>
+    </div>    
 </body>
 </html>
