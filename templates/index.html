@@ -30,13 +30,22 @@
     </div>
     <div class="Ranking">    
         <h1>Ranking</h1>
-        <ol>
-            <li value="1"> Jugador 1</li>
-            <li> Jugador 2</li>   
-            <li> Jugador 3</li>   
-            <li> Jugador 4</li>   
-            <li> Jugador 5</li>       
-        </ol>
+        <table>
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Puntaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for puntaje in ranking %}
+                <tr>
+                  <td>{{ puntaje.usuario.username }}</td>
+                  <td>{{ puntaje.puntaje }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
     </div>
     </form>
     <a class="EnlaceInferior" href="/admin">Página de admin</a>

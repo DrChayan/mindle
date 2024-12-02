@@ -122,11 +122,20 @@
         <div class="diagnosticos-container">
             <div class="diagnosticos-title">Nombres de los diagnósticos</div>
             <ol class="diagnosticos-list">
-                {% for trastorno in trastornos %}
+                {% for dato in datos_trastornos %}
                 <li>
-                    <span class="nombre">{{ trastorno.nombre }}</span>
+                    <span class="nombre">{{ dato.trastorno.nombre }}</span>
                     <div class="detalles">
-                        <p>{{ trastorno.contexto }}</p>
+                        <p>{{ dato.trastorno.contexto }}</p>
+                        {% if dato.sintomas %}
+                        <ul>
+                            {% for sintoma in dato.sintomas %}
+                            <li>{{ sintoma }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p><i>No hay síntomas registrados.</i></p>
+                        {% endif %}
                     </div>
                 </li>
                 {% endfor %}
