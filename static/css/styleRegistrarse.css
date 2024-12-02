@@ -1,13 +1,14 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 60px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     background: linear-gradient(315deg, rgb(164, 228, 255) 3%, rgb(102, 208, 254) 38%, rgb(50, 172, 253) 68%, rgb(1, 101, 159) 98%);
     animation: gradient 15s ease infinite;
+    flex-direction: column;
 }
 
 @keyframes gradient {
@@ -72,24 +73,28 @@ body {
 /* Contenedor principal */
 form {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+    width: 450px;
+    position: relative;
+    margin: 0;
 }
 
 /* Título */
 h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 24px;
+    padding: 5px;
+    top: 10px;
 }
 
 /* Etiquetas */
 label {
-    font-size: 16px;
+    font-size: 14px;
     color: #555;
     display: block;
     margin-bottom: 5px;
@@ -97,18 +102,26 @@ label {
 
 /* Campos de entrada */
 input {
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    height: 15px;
+    padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 14px;
+    transition: borde-color 0.3s ease, box-shadow 0.3 ease;
+}
+
+input:focus {
+    border-color: #00bfff;
+    outline: none;
+    box-shadow: 0 0 5px rgb(0, 191, 255, 0.5);
 }
 
 /* Botón */
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px;
     background-color: #00bfff;
     color: white;
     text-decoration: none;
@@ -119,11 +132,12 @@ input {
     border: none;
     cursor: pointer;
     transition: transform 200ms ease-in-out 100ms;
+    margin-bottom: 8px;
 }
 
 .button:hover {
     background-color:#0056b3;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .Centrado {
@@ -138,7 +152,7 @@ input {
 p {
     color: #555;
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 /* Enlace */
@@ -160,6 +174,10 @@ a:hover {
 @media (max-width: 400px) {
     form {
         width: 90%;
+    }
+    h1 {
+        font-size: 22px;
+        width: -50px;
     }
 }
 .volver {
