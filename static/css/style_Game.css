@@ -6,17 +6,17 @@
     flex-direction: column; /* Asegura que los elementos estén apilados verticalmente */
     text-align: center; /* Centra el texto dentro del div */
 }
+
 .rounded-box {
     background-color: #d3d3d3; /* Tono gris claro */
     width: 550px; /* Ajusta el ancho */
-    padding: 20px; /* Espaciado interno */
-    height: 40%;
+    padding: 1%; /* Espaciado interno */
+    height: auto;
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
     text-align: center;
     position: relative; /* Para posicionar el botón "volver" */
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -27,8 +27,26 @@ body {
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;
     background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+#sintomaloco {
+    background-color: #d4edda;  /* Verde suave */
+    padding: 2px;              /* Espaciado interno */
+    border-radius: 5px;         /* Bordes redondeados */
+    border: 2px solid #c3e6cb;  /* Borde verde claro */
+    margin-bottom: 2px;        /* Espaciado inferior */
+}
+#sintomaloco p {
+    color: #004d00; /* Cambiar el color del texto a un verde oscuro */
+    font-size: 18px; /* Cambiar el tamaño de la fuente */
+    font-weight: bold; /* Hacer que el texto sea negrita */
+    padding: 10px; /* Añadir espaciado alrededor del texto */
+    margin: 0; /* Márgenes alrededor del párrafo */
+    text-align: center; /* Alinear el texto a la izquierda */
+}
 @keyframes gradient {
     0% {
         background-position: 0% 0%;
@@ -132,7 +150,12 @@ submitGuess {
 }
 
 footer {
-    margin-top: 20px;
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center;
+    bottom: 0;
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    text-align: center; /* Centra el texto */
     font-size: 14px;
     color: gray;
+    padding: 60px 0;
 }
